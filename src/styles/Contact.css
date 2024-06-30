@@ -1,0 +1,109 @@
+.contact-section {
+    background-color: #FFFFFF;
+    padding: 50px 0;
+  }
+  
+  .contact-header {
+    margin-bottom: 40px;
+  }
+  
+  .contact-small-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-align: center;
+    
+  }
+  
+  .contact-main-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+   text-align: center;
+    color:#282938 !important;
+
+  }
+  
+  .contact-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin: 0 0 30px 0;
+    text-align: center;
+  
+  }
+  
+  .contact-form {
+    max-width: 600px; 
+    margin: 0 auto; 
+  }
+  
+  .form-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    
+  }
+  
+  .form-control {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 5px 10px;
+    height: 35px;
+    width: 100%;
+  }
+
+  
+  .form-control.message-box {
+    height: 200px; 
+    width: 100%;
+  }
+  
+  .form-check {
+    margin-top: 20px;
+  }
+  
+  .submit-button {
+    background-color: #5E3BEE !important;
+    border-color: #5E3BEE !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px; 
+    max-width: 600px; 
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .form-label {
+      font-size: 0.9rem;
+    }
+  
+    .form-control {
+      font-size: 0.9rem;
+    }
+  
+    .submit-button {
+      width: 100%;
+    }
+    .contact-main-heading {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bolder;
+      font-size: 1.75rem;
+      margin: 0 0 10px 0;
+      text-align: left; 
+    }
+    .contact-description {
+      text-align: left;
+    
+    }
+    .contact-small-text {
+      text-align: left;
+      
+    }
+  }
+  

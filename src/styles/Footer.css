@@ -1,0 +1,80 @@
+.footer {
+    background-color: #F5FCFF;
+    padding: 40px 0 40px; /* Increased top and bottom padding */
+}
+
+.footer-logo {
+    height: 30px; /* Set size */
+    margin-right: 10px;
+}
+
+.footer-brand {
+    font-size: 1.2rem; /* Reduced size */
+    font-weight: bold;
+    color: #000000; /* Changed to black */
+}
+
+.footer-nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased gap */
+}
+
+.footer-nav-links a {
+    color: #000000 !important; /* Changed to black */
+    text-decoration: none;
+    font-size: 0.8rem; /* Reduced size */
+    
+}
+
+.footer-nav-links a:hover {
+    color: #333333 !important; /* Darker shade on hover */
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* Increased gap */
+}
+
+.footer-social-links img {
+    height: 20px; /* Set size */
+    width: 20px; /* Ensure all images are the same size */
+}
+
+.footer-divider {
+    margin: 30px 0; /* Increased margin */
+    border-top: 3px solid #D1D1D1;
+}
+
+.footer-bottom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom-left,
+.footer-bottom-right {
+    font-size: 0.9rem; /* Set size */
+    color: #000000; /* Changed to black */
+}
+
+.footer-bottom-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom-left span.footer-brand {
+    margin-left: 5px;
+    color: #000000; /* Changed to black */
+    font-size: 0.9rem; /* Same size as other text */
+}
+
+.footer-bottom-right a {
+    margin-left: 10px; /* Reduced margin */
+    color: #000000; /* Changed to black */
+    text-decoration: none;
+}
+
+.footer-bottom-right a:hover {
+    color: #333333; /* Darker shade on hover */
+}

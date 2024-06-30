@@ -1,0 +1,83 @@
+.navbar-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin: 0 10px; 
+    text-decoration: none;
+    color: #000000 !important;
+    font-size: 0.8rem;
+}
+
+.nav-link:hover {
+    color: #120642 !important;
+}
+
+.home-link {
+    color: #1C1E53 !important; 
+}
+
+.home-link:hover {
+    color: #5E3BEE !important; 
+}
+
+.contact-button {
+    color: #5E3BEE !important;
+    border: 2px solid #5E3BEE !important;
+    background-color: #FFFFFF !important;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #5E3BEE !important;
+    color: #ffffff !important;
+}
+.contact-button:active {
+    background-color:#5dcfbc  !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+
+
+}
+
+
+.navbar-left {
+    margin-left: 0;
+    padding-left: 15px; 
+}
+
+.navbar-right {
+    margin-right: 0;
+    padding-right: 15px; 
+}
+
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-left,
+    .navbar-right {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

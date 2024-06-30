@@ -1,0 +1,59 @@
+.about-me-section {
+    background-color: #FFFFFF;
+    padding: 50px 0;
+  }
+  
+  .about-me-image {
+    max-width: 100%;
+    height: auto;
+    width: 70%; 
+    border-radius: 10px;
+  }
+  
+  .about-me-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: #1C1E53 !important;
+  
+  }
+  
+  .small-about-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1C1E53 !important;
+    margin-bottom: 10px;
+  }
+  
+  .about-me-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #1C1E53;
+  }
+  
+  .read-more-button {
+    background-color: #5E3BEE;
+    border-color: #5E3BEE;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .small-about-text {
+      display: none;
+    }
+  
+    .about-me-heading {
+      font-size: 1.75rem;
+    }
+  
+    .about-me-text {
+      margin-bottom: 10px;
+    }
+  
+    .about-me-image {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+  }
+  
