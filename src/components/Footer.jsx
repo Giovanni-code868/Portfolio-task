@@ -9,7 +9,6 @@ import LinkedInIcon from '../assets/linkedin.svg';
 
 const Footer = () => {
   return (
-   
     <footer className="footer bg-footer">
       <Container>
         <Row className="align-items-center footer-top">
@@ -45,7 +44,6 @@ const Footer = () => {
         </Row>
       </Container>
     </footer>
-      
   );
 }
 
