@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Spinner } from 'react-bootstrap';
-import '../styles/Feedback.css';
-import avatar1 from '../assets/avatar1.svg'; 
-import avatar2 from '../assets/avatar2.svg'; 
-import avatar3 from '../assets/avatar3.svg'; 
-import star from '../assets/star.svg'; 
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Card, Spinner } from "react-bootstrap";
+import "../styles/Feedback.css";
+import avatar1 from "../assets/avatar1.svg";
+import avatar2 from "../assets/avatar2.svg";
+import avatar3 from "../assets/avatar3.svg";
+import star from "../assets/star.svg";
 
 const Feedback = () => {
   const [loading, setLoading] = useState(true);
@@ -13,25 +13,25 @@ const Feedback = () => {
   const feedbackData = [
     {
       stars: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.',
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.",
       avatar: avatar1,
-      name: 'Dianne Russell',
-      company: 'Starbucks'
+      name: "Dianne Russell",
+      company: "Starbucks",
     },
     {
       stars: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.',
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.",
       avatar: avatar2,
-      name: 'Kristin Watson',
-      company: 'Louis Vuitton'
+      name: "Kristin Watson",
+      company: "Louis Vuitton",
     },
     {
       stars: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.',
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.",
       avatar: avatar3,
-      name: 'Kathryn Murphy',
-      company: 'McDonald\'s'
-    }
+      name: "Kathryn Murphy",
+      company: "McDonald's",
+    },
   ];
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const Feedback = () => {
   }, [imagesLoaded, feedbackData]);
 
   return (
-    <section className="feedback-section" id='testimonials'>
+    <section className="feedback-section" id="testimonials">
       <Container>
         <div className="feedback-header">
           <p className="feedback-small-text">Client Feedback</p>
@@ -65,17 +65,30 @@ const Feedback = () => {
                 <Card.Body>
                   <div className="stars">
                     {[...Array(item.stars)].map((_, i) => (
-                      <img key={i} src={star} alt="star" className="star-icon" />
+                      <img
+                        key={i}
+                        src={star}
+                        alt="star"
+                        className="star-icon"
+                      />
                     ))}
                   </div>
                   <Card.Text className="feedback-text">{item.text}</Card.Text>
                   <div className="feedback-footer">
                     {loading ? (
-                      <Spinner animation="border" role="status" className="m-auto">
+                      <Spinner
+                        animation="border"
+                        role="status"
+                        className="m-auto"
+                      >
                         <span className="visually-hidden">Loading...</span>
                       </Spinner>
                     ) : (
-                      <img src={item.avatar} alt={item.name} className="avatar" />
+                      <img
+                        src={item.avatar}
+                        alt={item.name}
+                        className="avatar"
+                      />
                     )}
                     <div>
                       <p className="feedback-name">{item.name}</p>

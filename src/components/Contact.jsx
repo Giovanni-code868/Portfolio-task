@@ -1,55 +1,55 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import '../styles/Contact.css';
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
+import "../styles/Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
     termsAccepted: false,
   });
 
   const [formErrors, setFormErrors] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    message: '',
-    termsAccepted: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+    termsAccepted: "",
   });
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
   const validateForm = () => {
     const errors = {};
     if (!formData.firstName.trim()) {
-      errors.firstName = 'First Name is required';
+      errors.firstName = "First Name is required";
     }
     if (!formData.lastName.trim()) {
-      errors.lastName = 'Last Name is required';
+      errors.lastName = "Last Name is required";
     }
     if (!formData.email.trim()) {
-      errors.email = 'Email is required';
+      errors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Email is invalid';
+      errors.email = "Email is invalid";
     }
     if (!formData.phoneNumber.trim()) {
-      errors.phoneNumber = 'Phone Number is required';
+      errors.phoneNumber = "Phone Number is required";
     }
     if (!formData.message.trim()) {
-      errors.message = 'Message is required';
+      errors.message = "Message is required";
     }
     if (!formData.termsAccepted) {
-      errors.termsAccepted = 'You must accept the terms';
+      errors.termsAccepted = "You must accept the terms";
     }
     setFormErrors(errors);
     return Object.keys(errors).length === 0; // Return true if no errors
@@ -60,26 +60,26 @@ const Contact = () => {
     const isValid = validateForm();
     if (isValid) {
       // Submit form or handle API call here
-      alert('Form submitted successfully!');
+      alert("Form submitted successfully!");
       // Clear form after successful submission
       setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: '',
-        message: '',
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        message: "",
         termsAccepted: false,
       });
       setFormErrors({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: '',
-        message: '',
-        termsAccepted: '',
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        message: "",
+        termsAccepted: "",
       });
     } else {
-      alert('Please fill out the form correctly.');
+      alert("Please fill out the form correctly.");
     }
   };
 
@@ -88,8 +88,10 @@ const Contact = () => {
       <Container>
         <div className="contact-header">
           <p className="contact-small-text">Get in Touch</p>
-          <h2 className="main-heading">Contact Me</h2>
-          <p className="contact-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h2 className="contact-main-heading">Contact Me</h2>
+          <p className="contact-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
         </div>
         <Form className="contact-form" onSubmit={handleSubmit}>
           <Row>
@@ -104,7 +106,9 @@ const Contact = () => {
                   onChange={handleChange}
                 />
                 {formErrors.firstName && (
-                  <Form.Text className="text-danger">{formErrors.firstName}</Form.Text>
+                  <Form.Text className="text-danger">
+                    {formErrors.firstName}
+                  </Form.Text>
                 )}
               </Form.Group>
             </Col>
@@ -119,7 +123,9 @@ const Contact = () => {
                   onChange={handleChange}
                 />
                 {formErrors.lastName && (
-                  <Form.Text className="text-danger">{formErrors.lastName}</Form.Text>
+                  <Form.Text className="text-danger">
+                    {formErrors.lastName}
+                  </Form.Text>
                 )}
               </Form.Group>
             </Col>
@@ -136,7 +142,9 @@ const Contact = () => {
                   onChange={handleChange}
                 />
                 {formErrors.email && (
-                  <Form.Text className="text-danger">{formErrors.email}</Form.Text>
+                  <Form.Text className="text-danger">
+                    {formErrors.email}
+                  </Form.Text>
                 )}
               </Form.Group>
             </Col>
@@ -151,7 +159,9 @@ const Contact = () => {
                   onChange={handleChange}
                 />
                 {formErrors.phoneNumber && (
-                  <Form.Text className="text-danger">{formErrors.phoneNumber}</Form.Text>
+                  <Form.Text className="text-danger">
+                    {formErrors.phoneNumber}
+                  </Form.Text>
                 )}
               </Form.Group>
             </Col>
@@ -167,7 +177,9 @@ const Contact = () => {
               onChange={handleChange}
             />
             {formErrors.message && (
-              <Form.Text className="text-danger">{formErrors.message}</Form.Text>
+              <Form.Text className="text-danger">
+                {formErrors.message}
+              </Form.Text>
             )}
           </Form.Group>
           <Form.Group controlId="formTerms">
@@ -180,7 +192,9 @@ const Contact = () => {
               onChange={handleChange}
             />
             {formErrors.termsAccepted && (
-              <Form.Text className="text-danger">{formErrors.termsAccepted}</Form.Text>
+              <Form.Text className="text-danger">
+                {formErrors.termsAccepted}
+              </Form.Text>
             )}
           </Form.Group>
           <div className="text-center">

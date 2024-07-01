@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Spinner } from 'react-bootstrap';
 import '../styles/Hero.css';
-import Heroimg from '../assets/Heroimg.png'; // Your hero image
+import Heroimg from '../assets/Heroimg.png'; 
 import useWindowWidth from '../hooks/useWindowWidth';
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
   useEffect(() => {
     const img = new Image();
     img.onload = () => setLoadingImage(false);
-    img.src = Heroimg; // Replace with your image source
+    img.src = Heroimg; 
   }, []);
 
   const handleReadMore = () => {

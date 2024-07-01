@@ -1,11 +1,11 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import '../styles/Footer.css';
-import FooterLogo from '../assets/Navlogo.svg';
-import FacebookIcon from '../assets/facebook.svg';
-import InstagramIcon from '../assets/instagram.svg';
-import TwitterIcon from '../assets/twitter.svg';
-import LinkedInIcon from '../assets/linkedin.svg';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "../styles/Footer.css";
+import FooterLogo from "../assets/Navlogo.svg";
+import FacebookIcon from "../assets/facebook.svg";
+import InstagramIcon from "../assets/instagram.svg";
+import TwitterIcon from "../assets/twitter.svg";
+import LinkedInIcon from "../assets/linkedin.svg";
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
         <Row className="align-items-center footer-top">
           <Col md={4} className="footer-logo-text">
             <img src={FooterLogo} alt="Logo" className="footer-logo" />
-            <span className="footer-brand">GiovanniDev</span>
+            <span className="footer-brand">JohnDev,</span>
           </Col>
           <Col md={4} className="footer-nav-links">
             <a href="#">Home</a>
@@ -24,10 +24,18 @@ const Footer = () => {
             <a href="#">Testimonials</a>
           </Col>
           <Col md={4} className="footer-social-links text-end">
-            <a href="#"><img src={FacebookIcon} alt="Facebook" /></a>
-            <a href="#"><img src={InstagramIcon} alt="Instagram" /></a>
-            <a href="#"><img src={TwitterIcon} alt="Twitter" /></a>
-            <a href="#"><img src={LinkedInIcon} alt="LinkedIn" /></a>
+            <a href="#">
+              <img src={FacebookIcon} alt="Facebook" />
+            </a>
+            <a href="#">
+              <img src={InstagramIcon} alt="Instagram" />
+            </a>
+            <a href="#">
+              <img src={TwitterIcon} alt="Twitter" />
+            </a>
+            <a href="#">
+              <img src={LinkedInIcon} alt="LinkedIn" />
+            </a>
           </Col>
         </Row>
         <hr className="footer-divider" />
@@ -45,6 +53,6 @@ const Footer = () => {
       </Container>
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -9,7 +9,7 @@ const NavbarComponent = () => {
       <Container>
         <Navbar.Brand href="#" className="d-flex align-items-center">
           <img src={Navlogo} alt="Logo" className="navbar-logo" />
-          <span className="navbar-brand">GiovanniDev</span>
+          <span className="navbar-brand">JohnDev,</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">

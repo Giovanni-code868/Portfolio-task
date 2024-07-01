@@ -1,20 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button, Spinner } from 'react-bootstrap';
-import '../styles/portfolio.css';
-import githubLogo from '../assets/github.svg';
-import arrowIcon from '../assets/arrow-up-right.svg';
-import project1 from '../assets/portfolio1.svg';
-import project2 from '../assets/portfolio2.svg';
-import project3 from '../assets/portfolio3.svg';
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Card, Button, Spinner } from "react-bootstrap";
+import "../styles/portfolio.css";
+import githubLogo from "../assets/github.svg";
+import arrowIcon from "../assets/arrow-up-right.svg";
+import project1 from "../assets/portfolio1.svg";
+import project2 from "../assets/portfolio2.svg";
+import project3 from "../assets/portfolio3.svg";
 
 const Portfolio = () => {
   const [loading, setLoading] = useState(true);
   const [imagesLoaded, setImagesLoaded] = useState({});
 
   const portfolioData = [
-    { title: 'Abuse', image: project1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.', link: '#' },
-    { title: 'App Dashboard', image: project2, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.', link: '#' },
-    { title: 'Easy Rent', image: project3, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.', link: '#' },
+    {
+      title: "Abuse",
+      image: project1,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      link: "#",
+    },
+    {
+      title: "App Dashboard",
+      image: project2,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      link: "#",
+    },
+    {
+      title: "Easy Rent",
+      image: project3,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      link: "#",
+    },
   ];
 
   useEffect(() => {
@@ -35,7 +53,7 @@ const Portfolio = () => {
   }, [imagesLoaded, portfolioData]);
 
   return (
-    <section className="portfolio-section" id='portfolio'>
+    <section className="portfolio-section" id="portfolio">
       <Container>
         <Row className="align-items-center mb-4">
           <Col md={6}>
@@ -44,7 +62,11 @@ const Portfolio = () => {
           </Col>
           <Col md={6} className="text-md-end text-sm-start">
             <Button variant="primary" className="github-button">
-              <img src={githubLogo} alt="Github Logo" className="me-2 github-logo" />
+              <img
+                src={githubLogo}
+                alt="Github Logo"
+                className="me-2 github-logo"
+              />
               Visit My Github
             </Button>
           </Col>
@@ -58,16 +80,26 @@ const Portfolio = () => {
                     <span className="visually-hidden">Loading...</span>
                   </Spinner>
                 ) : (
-                  <Card.Img variant="top" src={item.image} className="card-image" />
+                  <Card.Img
+                    variant="top"
+                    src={item.image}
+                    className="card-image"
+                  />
                 )}
                 <Card.Body>
                   <Card.Title className="card-title">{item.title}</Card.Title>
-                  <Card.Text className="card-description">{item.description}</Card.Text>
+                  <Card.Text className="card-description">
+                    {item.description}
+                  </Card.Text>
                   <div className="link-section">
                     <a href={item.link} className="visit-link">
                       Visit Website
                     </a>
-                    <img src={arrowIcon} alt="Arrow Icon" className="arrow-icon" />
+                    <img
+                      src={arrowIcon}
+                      alt="Arrow Icon"
+                      className="arrow-icon"
+                    />
                   </div>
                 </Card.Body>
                 <hr className="card-divider" />
